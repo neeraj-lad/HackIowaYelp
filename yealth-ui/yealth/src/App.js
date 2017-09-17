@@ -6,14 +6,10 @@ import { render } from 'react-dom';
 import FlatButton from 'material-ui/FlatButton';
 import Toolbar from 'material-ui/Toolbar';
 
-const newStyle = {
-  
-};
-
 
 function App() {
   return (
-    <Toolbar style={styles.toolbar_style}>
+    <Toolbar>
       <FlatButton color='black' Label='Hello World'>
         Lat Long map
     </FlatButton>
@@ -23,7 +19,5 @@ function App() {
     </Toolbar>
   );
 }
-
-render(<App />, document.querySelector('#titlebar'));
 
 export default App;

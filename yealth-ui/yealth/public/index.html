@@ -21,7 +21,6 @@
     -->
     <title>React App</title>
   </head>
-  <div id="titlebar"></div>
   <body>
     <noscript>
       You need to enable JavaScript to run this app.
@@ -30,17 +29,17 @@
     <!DOCTYPE html>
     <meta charset="utf-8">
     <style>
-    
+
     .counties {
       fill: none;
     }
-    
+
     .states {
       fill: none;
       stroke: #000;
       stroke-linejoin: round;
     }
-    
+
     .q0-9 { fill:rgb(165,0,38); }
     .q1-9 { fill:rgb(215,48,39); }
     .q2-9 { fill:rgb(244,109,67); }
@@ -69,7 +68,7 @@
     <body>
       <script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
       <script src="http://d3js.org/topojson.v1.min.js"></script>
-      
+
       <style type="text/css">
         .feature {
           fill: none;
@@ -90,42 +89,42 @@
       </head>
       <body>
         <h1 align="center">Healthy Restaurants according to Yelp</h1>
-      
-      
+
+
       <script type="text/javascript">
-      
+
       var width = 950,
           height = 550;
-      
+
       // set projection
       var projection = d3.geo.mercator();
-      
+
       // create path variable
       var path = d3.geo.path()
           .projection(projection);
-      
-      
+
+
       d3.json("us.json", function(error, topo) { console.log(topo);
-      
+
           states = topojson.feature(topo, topo.objects.states).features
-      
+
           // set projection parameters
           projection
             .scale(800)
             .center([-96, 37.5])
-      
+
           // create svg variable
           var svg = d3.select("h1").append("svg")
                   .attr("width", width)
                   .attr("height", height);
-      
+
           // points
           aa = [-122.490402, 37.786453];
         bb = [-122.389809, 37.72728];
         cc = [-112.389809, 42.72728];
-      
+
         console.log(projection(aa),projection(bb),projection(cc));
-      
+
         // add states from topojson
         svg.selectAll("path")
             .data(states).enter()
@@ -133,13 +132,13 @@
             .attr("class", "feature")
             .style("fill", "lightsteelblue")
             .attr("d", path);
-      
-          // put boarder around states 
+
+          // put boarder around states
           svg.append("path")
             .datum(topojson.mesh(topo, topo.objects.states, function(a, b) { return a !== b; }))
             .attr("class", "mesh")
             .attr("d", path);
-      
+
           var h1 = [aa,bb];
           var h2 = [];
           var h3 = [];
@@ -153,7 +152,7 @@
           .attr("cy", function (d) { return projection(d)[1]; })
           .attr("r", "4px")
           .attr("fill", "red")
-      
+
           svg.selectAll("h2")
           .data(h2).enter()
           .append("circle")
@@ -161,7 +160,7 @@
           .attr("cy", function (d) { return projection(d)[1]; })
           .attr("r", "4px")
           .attr("fill", "lightcoral")
-          
+
           svg.selectAll("h3")
           .data(h3).enter()
           .append("circle")
@@ -186,7 +185,7 @@
           .attr("r", "4px")
           .attr("fill", "green")
       });
-      
+
       </script>
 
 
@@ -194,7 +193,7 @@
 
 
     <div align="center" id="root"></div>
-    
+
     <!--
       This HTML file is a template.
       If you open it directly in the browser, you will see an empty page.
@@ -205,4 +204,3 @@
       To begin the development, run `npm start` or `yarn start`.
       To create a production bundle, use `npm run build` or `yarn build`.
     -->
-  
