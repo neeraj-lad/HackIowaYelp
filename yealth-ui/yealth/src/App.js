@@ -1,21 +1,34 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
-import './App.css';
+import styles from './App.css';
 
-class App extends Component {
-  render() {
-    return (
-      <div className="Ap">
-      </div>
-    );
-  }
+import { render } from 'react-dom';
+import FlatButton from 'material-ui/Button';
+import Toolbar from 'material-ui/Button';
+
+function App() {
+  return (
+    <Toolbar style={styles.toolbar_style}>
+      <FlatButton color='black' Label='Hello World'>
+        Button 1
+    </FlatButton>
+    <FlatButton color='black' Label='Hello World'>
+        Button 2
+    </FlatButton>
+    <FlatButton color='black' Label='Hello World'>
+        Button 3
+    </FlatButton>
+    </Toolbar>
+  );
 }
+
+render(<App />, document.querySelector('#titlebar'));
 
 export default App;
 
+
 // Mississippi 
 var MS = { 1001: true, 1003: true, 1005: true, 1007: true, 1009: true, 1011: true, 1013: true, 1015: true, 1017: true, 1019: true, 1021: true, 1023: true, 1025: true, 1027: true, 1029: true, 1031: true, 1033: true, 1035: true, 1037: true, 1039: true, 1041: true, 1043: true, 1045: true, 1047: true, 1049: true, 1051: true, 1053: true, 1055: true, 1057: true, 1059: true, 1061: true, 1063: true, 1065: true, 1067: true, 1069: true, 1071: true, 1073: true, 1075: true, 1077: true, 1079: true, 1081: true, 1083: true, 1085: true, 1087: true, 1089: true, 1091: true, 1093: true, 1095: true, 1097: true, 1099: true, 1101: true, 1103: true, 1105: true, 1107: true, 1109: true, 1111: true, 1113: true, 1115: true, 1117: true, 1119: true, 1121: true, 1123: true, 1125: true, 1127: true, 1129: true, 1131: true, 1133: true }
-console.log(json.stringify(MS));
 // Alaska
 var AK = { 2013: true, 2016: true, 2020: true, 2050: true, 2060: true, 2068: true, 2070: true, 2090: true, 2100: true, 2105: true, 2110: true, 2122: true, 2130: true, 2150: true, 2158: true, 2164: true, 2170: true, 2180: true, 2185: true, 2188: true, 2201: true, 2195: true, 2198: true, 2220: true, 2230: true, 2232: true, 2240: true, 2261: true, 2270: true, 2280: true, 2275: true, 2282: true, 2290: true }
 // Arizona

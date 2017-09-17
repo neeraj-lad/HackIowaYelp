@@ -18,6 +18,11 @@
   font-size: large;
 }
 
+toolbar_style {
+  background: rgba(125,255,125, .3),
+};
+
+
 @keyframes App-logo-spin {
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
