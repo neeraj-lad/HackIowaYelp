@@ -42,14 +42,14 @@
     
     .q0-9 { fill:rgb(30,250,0); }
     .q1-9 { fill:rgb(85,235,20); }
-    .q2-9 { fill:rgb(198,219,239); }
+    .q2-9 { fill:rgb(155,219,139); }
     .q3-9 { fill:rgb(70,202,34); }
     .q4-9 { fill:rgb(107,174,214); }
     .q5-9 { fill:rgb(66,146,198); }
     .q6-9 { fill:rgb(33,113,181); }
     .q7-9 { fill:rgb(8,200,156); }
     .q8-9 { fill:rgb(8,200,107); }
-    .q9-9 { fill:rgb(8,200,107); }
+    .q9-9 { fill:rgb(0,145,0); }
     
     </style>
     <body>
@@ -64,7 +64,7 @@
     var rateById = d3.map();
     
     var quantile = d3.scale.quantile()
-        .range(d3.range(9).map(function(i) { return "q" + i + "-9"; }));
+        .range(d3.range(10).map(function(i) { return "q" + i + "-9"; }));
     
     var projection = d3.geo.albersUsa()
         .scale(1280)
