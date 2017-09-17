@@ -33,4 +33,4 @@ for state in state_score_dict:
     state_score_dict[state] = state_score_dict[state] + (-1) * min_val
 
 for state in state_score_dict:
-    print('%s %f' % (state, state_score_dict[state]))
+    print("{'state': '%s', 'health_score': %f};" % (state, state_score_dict[state]))
