@@ -25,5 +25,7 @@ for key in state_health_score_dict:
     for county in state_county_dict[key]['counties']:
         county_score_dict[county] = state_health_score
 
-for county in county_score_dict:
-    print('%s %f' % (county, county_score_dict[county]))
+file_health_sentiment = '../health-sentiment.tsv'
+with open(file_health_sentiment, 'w') as f:
+    for county in county_score_dict:
+        f.write('%s\t%f\n' % (county, county_score_dict[county]))
