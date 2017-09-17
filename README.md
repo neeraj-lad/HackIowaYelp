@@ -2,7 +2,7 @@
 
 ## To do
 - [ ] Document Modelling
-- [ ] Health sentiment
+- [x] Health sentiment
 - [ ] Map the Health sentiment 
 
 ## Possible improvements
