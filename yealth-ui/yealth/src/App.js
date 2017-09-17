@@ -3,8 +3,8 @@ import logo from './logo.svg';
 import styles from './App.css';
 
 import { render } from 'react-dom';
-import FlatButton from 'material-ui/Button';
-import Toolbar from 'material-ui/Button';
+import FlatButton from 'material-ui/FlatButton';
+import Toolbar from 'material-ui/Toolbar';
 
 const newStyle = {
   
