@@ -3,7 +3,7 @@
 ## To do
 - [ ] Document Modelling
 - [x] Health sentiment
-- [ ] Map the Health sentiment 
+- [x] Map the Health sentiment 
 
 ## Possible improvements
 - [ ] Compare Health sentiment to Health inspection data
